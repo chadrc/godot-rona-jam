@@ -4,6 +4,8 @@ export (int) var run_speed = 200
 export (int) var jump_speed = -400
 export (int) var gravity = 1200
 
+onready var vel_label = $"../UI/MarginContainer/HBoxContainer/Value"
+
 var velocity = Vector2()
 var isJumping = false
 
@@ -29,3 +31,5 @@ func _physics_process(delta):
 		isJumping = false
 		
 	velocity = move_and_slide(velocity, Vector2(0, -1))
+	
+	vel_label.set_text(str(velocity.x))
