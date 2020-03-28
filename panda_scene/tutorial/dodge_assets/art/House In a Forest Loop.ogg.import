@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/House In a Forest Loop.ogg-b675a0e5e104240e176c398b88daa909.oggstr"
+
+[deps]
+
+source_file="res://panda_scene/tutorial/dodge_assets/art/House In a Forest Loop.ogg"
+dest_files=[ "res://.import/House In a Forest Loop.ogg-b675a0e5e104240e176c398b88daa909.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

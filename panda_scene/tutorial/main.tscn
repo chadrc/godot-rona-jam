@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://panda_scene/tutorial/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://panda_scene/tutorial/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://panda_scene/tutorial/main.gd" type="Script" id=3]
+[ext_resource path="res://panda_scene/tutorial/mob.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 3.13129, 0.540436, 0, 0, 0, 0, 601.492, 3.12515, 0, 0, 0, 0, 598.907, 1025.38, 0, 0, 0, 0, 0.546631, 1027.96, 0, 0, 0, 0, 3.13129, 0.540436 )
+}
+
+[node name="Main" type="Node"]
+script = ExtResource( 3 )
+Mob = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -307.0
+margin_top = -521.5
+margin_right = 307.0
+margin_bottom = 521.5
+color = Color( 0.364706, 0.364706, 0.364706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 240, 450 )
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2( 3.13129, 0.540436 )
+rotation = 0.00431964
+
+[node name="HUD" parent="." instance=ExtResource( 2 )]
+[connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="new_game"]
