@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://chris/Player.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28.6102, 28.8721 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="Chris - Root" type="Node2D"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 50.4832, 405.39 )
+scale = Vector2( 1, 2.5 )
+script = ExtResource( 1 )
+run_speed = 400
+jump_speed = -600
+gravity = 2000
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+margin_left = -8.0
+margin_top = -49.0
+margin_right = 49.0
+margin_bottom = 9.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 20.5278, -20.0612 )
+shape = SubResource( 1 )
+
+[node name="Ground" type="KinematicBody2D" parent="."]
+position = Vector2( -0.0732193, 599.764 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2( 548.728, -31.7449 )
+scale = Vector2( 54.5955, 3.20966 )
+shape = SubResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/CollisionShape2D"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
