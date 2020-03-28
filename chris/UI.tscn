@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/8x8.png-08b776488c34b1828bb0779b486f9411.stex"
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 16.0
+
+[node name="TextureProgress" type="TextureProgress" parent="MarginContainer/HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 16.0
+texture_under = SubResource( 1 )
+texture_progress = SubResource( 1 )
+tint_progress = Color( 0, 0.368627, 1, 1 )
+
+[node name="Speed" type="Label" parent="MarginContainer/HBoxContainer"]
+margin_left = 20.0
+margin_top = 1.0
+margin_right = 67.0
+margin_bottom = 15.0
+text = "Speed: "
+
+[node name="Value" type="Label" parent="MarginContainer/HBoxContainer"]
+margin_left = 71.0
+margin_top = 1.0
+margin_right = 79.0
+margin_bottom = 15.0
+text = "0"
