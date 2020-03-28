@@ -30,6 +30,11 @@ __meta__ = {
 position = Vector2( 20.5278, -20.0612 )
 shape = SubResource( 1 )
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 20.5278, -20.0612 )
+scale = Vector2( 1, 0.4 )
+current = true
+
 [node name="Ground" type="KinematicBody2D" parent="."]
 position = Vector2( -0.0732193, 599.764 )
 
