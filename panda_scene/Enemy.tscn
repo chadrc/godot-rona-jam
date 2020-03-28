@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://panda_scene/Enemy.gd" type="Script" id=2]
+
+[node name="EnemyPathFollow" type="PathFollow2D"]
+position = Vector2( 61.6843, 928.632 )
+rotation = -0.15551
+loop = false
+script = ExtResource( 2 )
+
+[node name="EnemySprite" type="Sprite" parent="."]
+position = Vector2( -1.1347, -1.827 )
+texture = ExtResource( 1 )
