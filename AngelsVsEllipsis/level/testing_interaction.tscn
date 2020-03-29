@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://AngelsVsEllipsis/enemies/types/Circle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://AngelsVsEllipsis/towers/tower.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tower" parent="." instance=ExtResource( 2 )]
+position = Vector2( 322.372, 217.214 )
+atkDamage = 5.0
+atkSpeed = 0.5
+
+[node name="Circle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 230.992, 171.518 )
+[connection signal="area_entered" from="Tower" to="Tower" method="_on_Tower_area_entered"]
+[connection signal="area_exited" from="Tower" to="Tower" method="_on_Tower_area_exited"]
+[connection signal="body_exited" from="Tower" to="Tower" method="_on_Tower_body_exited"]
