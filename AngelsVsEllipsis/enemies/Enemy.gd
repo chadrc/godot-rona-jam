@@ -1,5 +1,6 @@
 extends Node2D
 
+class_name Enemy
 
 export (float) var move_speed = 50
 
