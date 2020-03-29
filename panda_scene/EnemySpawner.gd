@@ -13,3 +13,10 @@ func _ready():
 func _on_Timer_timeout():
 	var enemy = Enemy.instance()
 	SpawnPath.add_child(enemy)
+
+
+func _on_Area2D_area_entered(area):
+	if area.get_owner().is_in_group(get_node("/root/Globals").EnemyGroupName):
+		print("Attacking enemy")
+
+

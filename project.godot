@@ -19,6 +19,10 @@ config/name="Learning"
 run/main_scene="res://panda_scene/EnemySpawner.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://panda_scene/Globals.gd"
+
 [display]
 
 window/size/width=600
