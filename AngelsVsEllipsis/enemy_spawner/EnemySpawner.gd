@@ -51,7 +51,7 @@ func start_wave(index):
 	
 
 func _on_enemy_timer(index, limit):
-	print("[", current_wave, "] enemy tick: ", index)
+	# print("[", current_wave, "] enemy tick: ", index)
 	
 	if deployed[index] < limit:
 		# deploy enemy
@@ -88,12 +88,12 @@ func _on_WaveTimer_timeout():
 	timers = []
 	deployed = []
 	
-	print("Wave ended")
+	# print("Wave ended")
 	
 	current_wave += 1
 	
 	if current_wave < wave_data.size():
 		start_wave(current_wave)
 	else:
-		print("Waves Complete")
+		# print("Waves Complete")
 		emit_signal("waves_complete")
