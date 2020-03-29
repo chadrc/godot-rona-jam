@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://AngelsVsEllipsis/enemies/Enemy.gd"
+}, {
 "base": "Button",
 "class": "TowerButton",
 "language": "GDScript",
@@ -20,6 +25,7 @@ _global_script_classes=[ {
 "path": "res://AngelsVsEllipsis/ui/tower_placement/tower_placement.gd"
 } ]
 _global_script_class_icons={
+"Enemy": "",
 "TowerButton": "",
 "TowerPlacement": ""
 }

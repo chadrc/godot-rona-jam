@@ -10,7 +10,7 @@ export (float) var health
 export (float) var regen_per_second = 0
 
 onready var sprite = $Sprite
-onready var health_bar: TextureProgress = $HealthBar
+onready var health_bar: TextureProgress
 
 var is_dead = false
 signal death(verts)
@@ -22,6 +22,8 @@ func _ready():
 	add_to_group(get_node("/root/Globals").EnemyGroupName)
 	
 	max_health = health
+	
+	health_bar = $HealthBar
 	health_bar.max_value = max_health
 
 func _process(delta):
