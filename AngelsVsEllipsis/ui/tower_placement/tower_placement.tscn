@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://AngelsVsEllipsis/ui/tower_placement/tower_placement.gd" type="Script" id=1]
+
+[node name="tower_placement" type="Button"]
+margin_right = 20.0
+margin_bottom = 20.0
+toggle_mode = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
