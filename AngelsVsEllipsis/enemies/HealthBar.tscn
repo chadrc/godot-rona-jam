@@ -10,8 +10,8 @@ margin_bottom = -37.0
 rect_scale = Vector2( 3.96, 1 )
 texture_under = ExtResource( 1 )
 texture_progress = ExtResource( 1 )
-tint_under = Color( 0, 1, 0, 1 )
-tint_progress = Color( 1, 0, 0, 1 )
+tint_under = Color( 1, 0, 0, 1 )
+tint_progress = Color( 0, 1, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

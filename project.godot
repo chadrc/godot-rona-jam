@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Learning"
-run/main_scene="res://panda_scene/EnemySpawner.tscn"
+run/main_scene="res://AngelsVsEllipsis/level/test_level.tscn"
 config/icon="res://icon.png"
 
 [autoload]
