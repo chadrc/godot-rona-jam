@@ -1,0 +1,11 @@
+[
+	{
+		"enemies": [
+			{
+				"type": "Circle",
+				"count": 10
+			}			
+		],
+		"duration": 20
+	}
+]

@@ -9,7 +9,7 @@ extents = Vector2( 31.3707, 32.126 )
 [node name="Oval" type="Area2D"]
 scale = Vector2( 1, 1.5 )
 script = ExtResource( 2 )
-move_speed = 100.0
+move_speed = 150.0
 health = 25.0
 
 [node name="Sprite" type="Sprite" parent="."]
