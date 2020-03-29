@@ -24,8 +24,12 @@ func _ready():
 
 
 func on_spawn_tower(tower):
-	tower.instance()
+	var new_tower = tower.instance()
+	new_tower.position = get_position()
+	
+	get_tree().root.add_child(new_tower)
 	queue_free()
+
 
 func _toggled(button_pressed: bool):
 	is_showing_menu = button_pressed

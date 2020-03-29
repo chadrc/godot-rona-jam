@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://AngelsVsEllipsis/ui/tower_placement/tower_placement.gd" type="Script" id=1]
 [ext_resource path="res://AngelsVsEllipsis/ui/tower_placement/tower_button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://AngelsVsEllipsis/towers/tower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://AngelsVsEllipsis/towers/triangle.png" type="Texture" id=4]
 
 [node name="tower_placement" type="Button"]
 margin_right = 40.0
@@ -24,10 +25,11 @@ __meta__ = {
 }
 
 [node name="tl_tower" parent="." instance=ExtResource( 2 )]
-margin_left = -80.0
-margin_top = -80.0
-margin_right = 0.0
-margin_bottom = 0.0
+margin_left = -112.458
+margin_top = -106.652
+margin_right = -0.457581
+margin_bottom = -0.652161
+icon = ExtResource( 4 )
 tower = ExtResource( 3 )
 
 [node name="tr_tower" parent="." instance=ExtResource( 2 )]
