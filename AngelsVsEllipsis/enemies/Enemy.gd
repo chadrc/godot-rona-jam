@@ -6,6 +6,7 @@ var max_health
 export (float) var health
 export (float) var regen_per_second = 0
 var is_dead = false
+signal death(verts)
 
 export (int) var verts = 0
 
@@ -15,14 +16,16 @@ func _ready():
 	max_health = health
 
 func _process(delta):
-	process_health(delta)
+	if !is_dead:
+		process_health(delta)
 	
 func take_damage(damage):
 	health -= damage
 	
 	if health <= 0:
-		is_dead = true
-		# emit death signal
+		if !is_dead:
+			is_dead = true
+			emit_signal("death", verts)
 
 func process_health(delta):
 	if health < max_health:
