@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://AngelsVsEllipsis/enemy_spawner/EnemySpawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://AngelsVsEllipsis/ui/tower_placement/tower_placement.tscn" type="PackedScene" id=2]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -15,3 +16,21 @@ curve = SubResource( 1 )
 [node name="EnemySpawner" parent="." instance=ExtResource( 1 )]
 TargetPath = NodePath("../Path2D")
 DataFileName = "TestLevelData"
+
+[node name="tower_placement" parent="." instance=ExtResource( 2 )]
+margin_left = 126.126
+margin_top = 168.684
+margin_right = 166.126
+margin_bottom = 208.684
+
+[node name="tower_placement2" parent="." instance=ExtResource( 2 )]
+margin_left = 455.757
+margin_top = 499.863
+margin_right = 495.757
+margin_bottom = 539.863
+
+[node name="tower_placement3" parent="." instance=ExtResource( 2 )]
+margin_left = 925.96
+margin_top = 219.185
+margin_right = 965.96
+margin_bottom = 259.185
