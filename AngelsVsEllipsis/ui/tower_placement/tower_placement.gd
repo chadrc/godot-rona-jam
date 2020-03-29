@@ -6,20 +6,31 @@ var is_showing_menu := false
 onready var plus_sign: Label = $Label
 
 # towers
-onready var tl_tower: Button = $tl_tower
-onready var tr_tower: Button = $tr_tower
-onready var br_tower: Button = $br_tower
-onready var bl_tower: Button = $bl_tower
+onready var tl_tower: TowerButton = $tl_tower
+onready var tr_tower: TowerButton = $tr_tower
+onready var br_tower: TowerButton = $br_tower
+onready var bl_tower: TowerButton = $bl_tower
 
 func _ready():
 	toggle_mode = true
 	
 	is_showing_menu = false
 	set_menu_state(is_showing_menu)
+	
+	tl_tower.connect("spawn_tower", self, "on_spawn_tower")
+	tr_tower.connect("spawn_tower", self, "on_spawn_tower")
+	br_tower.connect("spawn_tower", self, "on_spawn_tower")
+	bl_tower.connect("spawn_tower", self, "on_spawn_tower")
+
+
+func on_spawn_tower(tower):
+	tower.instance()
+	queue_free()
 
 func _toggled(button_pressed: bool):
 	is_showing_menu = button_pressed
 	set_menu_state(is_showing_menu)
+
 
 func set_menu_state(show: bool):
 	plus_sign.visible = !show

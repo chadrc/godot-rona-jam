@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://AngelsVsEllipsis/ui/tower_placement/tower_placement.gd" type="Script" id=1]
+[ext_resource path="res://AngelsVsEllipsis/ui/tower_placement/tower_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://AngelsVsEllipsis/towers/tower.tscn" type="PackedScene" id=3]
 
 [node name="tower_placement" type="Button"]
 margin_right = 40.0
@@ -21,34 +23,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="tl_tower" type="Button" parent="."]
+[node name="tl_tower" parent="." instance=ExtResource( 2 )]
 margin_left = -80.0
 margin_top = -80.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_right = 0.0
+margin_bottom = 0.0
+tower = ExtResource( 3 )
 
-[node name="tr_tower" type="Button" parent="."]
+[node name="tr_tower" parent="." instance=ExtResource( 2 )]
 margin_left = 40.0
 margin_top = -80.0
 margin_right = 120.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = 0.0
 
-[node name="br_tower" type="Button" parent="."]
+[node name="br_tower" parent="." instance=ExtResource( 2 )]
 margin_left = 40.0
 margin_top = 40.0
 margin_right = 120.0
 margin_bottom = 120.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="bl_tower" type="Button" parent="."]
+[node name="bl_tower" parent="." instance=ExtResource( 2 )]
 margin_left = -80.0
 margin_top = 40.0
+margin_right = 0.0
 margin_bottom = 120.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
