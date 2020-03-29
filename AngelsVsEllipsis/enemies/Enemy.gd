@@ -44,3 +44,4 @@ func die():
 	sprite.visible = false
 	
 	emit_signal("death", verts)
+	queue_free()

@@ -1,11 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://AngelsVsEllipsis/enemies/Enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://panda_scene/EnemySpawner.gd" type="Script" id=2]
-
-
-
-
+[ext_resource path="res://panda_scene/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://panda_scene/E_oldnemySpawner.gd" type="Script" id=2]
 
 [sub_resource type="Curve2D" id=1]
 _data = {

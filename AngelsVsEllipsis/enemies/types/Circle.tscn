@@ -4,7 +4,7 @@
 [ext_resource path="res://AngelsVsEllipsis/enemies/Enemy.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.3707, 32.126 )
+extents = Vector2( 30.4827, 32.2953 )
 
 [node name="Circle" type="Area2D"]
 script = ExtResource( 2 )
