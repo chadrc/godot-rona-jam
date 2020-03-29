@@ -77,7 +77,6 @@ func _remove_enemy(follower):
 
 
 func _on_WaveTimer_timeout():
-	print(timers)
 	for timer in timers:
 		timer.stop()
 		timer.disconnect("timeout", self, "_on_enemy_timer")
