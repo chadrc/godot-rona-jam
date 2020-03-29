@@ -7,7 +7,7 @@
 extents = Vector2( 31.3707, 32.126 )
 
 [node name="Big-Circle" type="Area2D"]
-scale = Vector2( 1, 1.5 )
+scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 move_speed = 25.0
 health = 100.0
