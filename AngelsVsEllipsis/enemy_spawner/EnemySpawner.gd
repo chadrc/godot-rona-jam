@@ -17,7 +17,7 @@ var spawn_path
 func _ready():
 	spawn_path = get_node(TargetPath)
 	var file = File.new()
-	file.open("res://AngelsVsEllipsis/enemy_spawner/" + DataFileName + ".json", File.READ)
+	file.open("res://AngelsVsEllipsis/data/levels/" + DataFileName + ".json", File.READ)
 	wave_data = JSON.parse(file.get_as_text()).result
 	start_wave(current_wave)
 	
@@ -62,7 +62,6 @@ func _on_enemy_timer(index, limit):
 		var enemy = load("res://AngelsVsEllipsis/enemies/types/" + data["type"] + ".tscn").instance()
 		
 		follower.speed = enemy.move_speed
-		follower.h_offset = rand_range(10.0, 100.0)
 		follower.v_offset = rand_range(10.0, 100.0)
 		
 		enemy.connect("death", self, "_remove_enemy", [follower])
@@ -80,7 +79,6 @@ func _remove_enemy(follower):
 func _on_WaveTimer_timeout():
 	print(timers)
 	for timer in timers:
-		print("stopping timer ", timer)
 		timer.stop()
 		timer.disconnect("timeout", self, "_on_enemy_timer")
 		timer.queue_free()

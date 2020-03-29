@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://AngelsVsEllipsis/enemy_spawner/EnemySpawner.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -243, 523.525, -187.589, -156.085, 187.589, 156.085, 222.392, 126.868, -259.187, -55.847, 259.187, 55.847, 461.531, 596.555, -262.051, 5.72789, 262.051, -5.72789, 962.722, 164.099, 0, 0, 0, 0, 1536.94, 486.293 )
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 1 )]
+TargetPath = NodePath("../Path2D")
+DataFileName = "TestLevelData"

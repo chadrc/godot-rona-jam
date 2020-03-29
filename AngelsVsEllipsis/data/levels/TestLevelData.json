@@ -1,0 +1,24 @@
+[
+	{
+		"enemies": [
+			{
+				"type": "Circle",
+				"count": 10
+			}			
+		],
+		"duration": 20
+	},
+	{
+		"enemies": [
+			{
+				"type": "Oval",
+				"count": 15
+			},
+			{
+				"type": "Big-Circle",
+				"count": 5
+			}
+		],
+		"duration": 30
+	}
+]
