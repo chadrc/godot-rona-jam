@@ -3,8 +3,8 @@
 [ext_resource path="res://AngelsVsEllipsis/ui/tower_placement/tower_placement.gd" type="Script" id=1]
 
 [node name="tower_placement" type="Button"]
-margin_right = 20.0
-margin_bottom = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
 toggle_mode = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -17,6 +17,38 @@ anchor_bottom = 1.0
 text = "+"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tl_tower" type="Button" parent="."]
+margin_left = -80.0
+margin_top = -80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tr_tower" type="Button" parent="."]
+margin_left = 40.0
+margin_top = -80.0
+margin_right = 120.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="br_tower" type="Button" parent="."]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 120.0
+margin_bottom = 120.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bl_tower" type="Button" parent="."]
+margin_left = -80.0
+margin_top = 40.0
+margin_bottom = 120.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
