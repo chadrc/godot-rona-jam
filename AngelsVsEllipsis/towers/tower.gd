@@ -21,6 +21,9 @@ var currentTargets = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite.animation = 'idle'
+	
+	self.connect("area_entered", self, "_on_Tower_area_entered")
+	self.connect("area_exited", self, "_on_Tower_area_exited")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,8 +35,8 @@ func _process(delta):
 		currentAtkTime -= delta
 		
 		#When attack time reaches 0, attack the enemy that's at the front of our current targets array
-		if currentAtkTime <= 0 && currentTargets[0] != null: 
-			currentTargetsData[currentTargets[0]].area.take_damage(atkDamage)
+		if currentAtkTime <= 0 && currentTargets.front() != null && currentTargetsData.has(currentTargets.front()): 
+			currentTargetsData[currentTargets.front()].area.take_damage(atkDamage)
 			currentAtkTime = atkSpeed
 			
 	else: 

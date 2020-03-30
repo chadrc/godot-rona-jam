@@ -7,7 +7,6 @@
 
 [node name="Tower" parent="." instance=ExtResource( 2 )]
 position = Vector2( 322.372, 217.214 )
-atkDamage = 5.0
 atkSpeed = 0.5
 
 [node name="Circle" parent="." instance=ExtResource( 1 )]
