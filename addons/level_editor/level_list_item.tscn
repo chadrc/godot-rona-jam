@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/level_editor/level_list_item.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_top = 0.017
+anchor_right = 0.23
+anchor_bottom = 0.056
+margin_top = -0.240001
+margin_right = -0.399994
+margin_bottom = -0.32
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 193.0
+margin_bottom = 7.0
+
+[node name="ButtonContainer" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -95.0
+margin_top = -10.0
+margin_bottom = 10.0
+
+[node name="EditButton" type="Button" parent="ButtonContainer"]
+margin_right = 36.0
+margin_bottom = 20.0
+text = "Edit"
+
+[node name="DeleteButton" type="Button" parent="ButtonContainer"]
+margin_left = 40.0
+margin_right = 95.0
+margin_bottom = 20.0
+text = "Delete"
